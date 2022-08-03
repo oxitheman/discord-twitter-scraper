@@ -25,7 +25,6 @@ def get_members(guild_id, channel_id, wait=1):
 	return bot.gateway.session.guild(guild_id).members
 
 members = list(get_members(serverid, channelid).keys())
-x=0
 for ids in members:
      getobj = GetValue2(bot.getProfile(ids).json())
      getobj = getobj.get_values('connected_accounts')
